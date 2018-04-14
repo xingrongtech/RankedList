@@ -26,4 +26,4 @@ RankedList（排名列表）
 
 运行环境
 ----
-rankedlist只能在Python 3.x环境下运行，不支持Python 2.x环境。要求系统已安装veryprettytable库，这个库用于在命令行状态下展示表格。在Jupyter Notebook环境下，会使用HTML展示表格。
+RankedList只能在Python 3.x环境下运行，不支持Python 2.x环境。要求系统已安装veryprettytable库，这个库用于在命令行状态下展示表格。在Jupyter Notebook环境下，会使用HTML展示表格。
