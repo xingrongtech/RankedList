@@ -8,7 +8,7 @@ Created on Fri Apr 13 16:15:17 2018
 from distutils.core import setup
 
 setup(name = 'rankedlist',
-      version = '0.0.2',
+      version = '0.0.3',
       description='A Python library for data ranking, finding one value or a group of values by indexing absolutely or relatively.', 
       author = 'xingrongtech',
       author_email = 'wzv100@163.com',
