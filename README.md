@@ -36,8 +36,8 @@ from rankedlist import RankedList
 #### 2.1 直接列数据创建：
 直接列数据，即通过RankedList类的构造方法创建排名列表。RankedList类的构造方法如下：
 <br>`RankedList(values, order=1)`
-<br>其中values是排名列表中的数据，可以以list给出，比如`[1.66,1.76,1.82,1.71,1.75]`；也可以字符串形式给出，此时数据之间要以空格隔开，比如`'1.66 1.76 1.82 1.71 1.75'`；如果已有现成的RankedList，那么直接将现成的RankedList作为values即可。
-<br>order为数据的排序方式。order=1时为升序，-1时为降序，0时为维持现有顺序不变。默认使用的是升序排列。
+* 其中values是排名列表中的数据，可以以list给出，比如`[1.66,1.76,1.82,1.71,1.75]`；也可以字符串形式给出，此时数据之间要以空格隔开，比如`'1.66 1.76 1.82 1.71 1.75'`；如果已有现成的RankedList，那么直接将现成的RankedList作为values即可。
+* order为数据的排序方式。order=1时为升序，-1时为降序，0时为维持现有顺序不变。默认使用的是升序排列。
 <br>下面举例说明：
 ``` python
 >>> r1 = RankedList([1.61, 3.20, 2.49, 2.61, 2.91])  #通过list给出数据
@@ -59,10 +59,10 @@ from rankedlist import RankedList
 ```
 81	88	83	86	87	91	90	86	93	90	79	81
 ```
-其中fName为数据文件的文件名（含扩展名），在这里即为'scores.txt'。
-splitter为数据之间的分隔符，这里数据之间使用一个缩进隔开的，故splitter为'\t'。
-order为排序，希望数据降序排列，故order为-1。
-故导入scores.txt文件的数据以创建排名列表的代码如下：
+* 其中fName为数据文件的文件名（含扩展名），在这里即为'scores.txt'。
+* splitter为数据之间的分隔符，这里数据之间使用一个缩进隔开的，故splitter为'\t'。
+* order为排序，希望数据降序排列，故order为-1。
+<br>故导入scores.txt文件的数据以创建排名列表的代码如下：
 ``` python
 >>> r = RankedList.fromTxt('scores.txt', order=-1)  #这里splitter为默认值'\t'，故省略
 ```
