@@ -24,6 +24,25 @@ RankedList（排名列表）
 * 通过download下载tar.gz文件，解压到本地，通过cd指令切换到解压的文件夹内
 * 通过`python setup.py install`实现安装
 
+使用教程
+----
+### 1.导入RankedList类：
+通过以下指令实现RankedList类的导入：
+`from rankedlist import RankedList`
+### 2.创建一个排名列表：
+要创建一个排名列表，需要给定要排名的数据，以及排列顺序（升序、降序还是维持原有顺序不变）。数据可以以两种方式给出：直接在程序中列出数据，或者从txt文件中读取数据。下面依次介绍两种创建排名列表的方式：
+#### 2.1 直接列数据创建：
+直接列数据，即通过RankedList类的构造方法创建排名列表。RankedList类的构造方法如下：
+<br>`RankedList(values, order=1)`
+<br>其中values是排名列表中的数据，可以以list给出，比如`[1.66,1.76,1.82,1.71,1.75]`；也可以字符串形式给出，此时数据之间要以空格隔开，比如`'1.66 1.76 1.82 1.71 1.75'`；如果已有现成的RankedList，那么直接将现成的RankedList作为values即可。
+<br>order为数据的排序方式。order=1时为升序，-1时为降序，0时为维持现有顺序不变。默认使用的是升序排列。
+<br>下面举例说明：
+* `r1 = RankedList([1.61, 3.20, 2.49, 2.61, 2.91])`
+* `r2 = RankedList('1.61 3.20 2.49 2.61 2.91')`
+* `r3 = RankedList(r2, order=-1)`
+
+#### 2.2 通过txt文件读取数据创建：
+
 运行环境
 ----
 RankedList只能在Python 3.x环境下运行，不支持Python 2.x环境。要求系统已安装veryprettytable库，这个库用于在命令行状态下展示表格。在Jupyter Notebook环境下，会使用HTML展示表格。
