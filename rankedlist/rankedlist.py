@@ -34,8 +34,10 @@ class RankedList():
     def __init__(self, values, order=1):
         '''创建RankedList排名列表
         【参数说明】
-        1.values(list或RankedList)：列表数值。例如[35.3,34.1,37.9,34.8]。
-        2.order(可选，int)：数据的排序方式。order=1时为升序，-1时为降序，0时为不排序。'''
+        1.values：排名列表数值，可以是以下数据类型：
+        (1)list：直接给出数值，例如[3,6,4,7]或[35.3,34.1,37.9,34.8]。
+        (2)str：将数据以字符串列表的形式给出，数值之间用空格隔开，例如'3.48 3.50 3.63 3.49 3.55'。
+        (3)RankedList：基于已有的排名列表，创建新的排名列表。'''
         if type(values) == list:
             if type(values[0]) != FFloat and str(values).__contains__('.'):
                 values = [FFloat(t) for t in values if t!='']
