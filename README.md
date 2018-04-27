@@ -35,7 +35,8 @@ from rankedlist import RankedList
 要创建一个排名列表，需要给定要排名的数据，以及排列顺序（升序、降序还是维持原有顺序不变）。数据可以以两种方式给出：直接在程序中列出数据，或者从txt文件中读取数据。下面依次介绍两种创建排名列表的方式：
 #### 2.1 直接列数据创建：
 直接列数据，即通过RankedList类的构造方法创建排名列表。RankedList类的构造方法如下：
-<br>`RankedList(values, order=1)`
+
+`RankedList(values, order=1)`
 * 其中values是排名列表中的数据，可以以list给出，比如`[1.66,1.76,1.82,1.71,1.75]`；也可以字符串形式给出，此时数据之间要以空格隔开，比如`'1.66 1.76 1.82 1.71 1.75'`；如果已有现成的RankedList，那么直接将现成的RankedList作为values即可。
 * order为数据的排序方式。order=1时为升序，-1时为降序，0时为维持现有顺序不变。默认使用的是升序排列。
 
@@ -55,7 +56,9 @@ from rankedlist import RankedList
 
 #### 2.2 通过txt文件读取数据创建：
 当需要排名的数据量很大时，将数据直接列到程序里会很不方便，这时可以把数据放在txt文件里，然后通过RankedList类的fromTxt静态方法创建排名列表。fromTxt方法如下：
-<br>`def fromTxt(fName, splitter='\t', order=1)`
+
+`def fromTxt(fName, splitter='\t', order=1)`
+
 下面以一个名为scores.txt的文件为例，来说明如何读取数据。scores.txt的文件内容如下：
 ```
 81	88	83	86	87	91	90	86	93	90	79	81
