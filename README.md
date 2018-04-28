@@ -158,7 +158,8 @@ from rankedlist import RankedList
 通过RankedList的pos类方法实现数据定位，pos类方法如下：
 `def pos(value, method='%')`
 * value为要定位的数值，可以是单个数值(如`86`)，或多个数值组成的list(如`[81,85,89]`)。
-* method为对于找到的数值，如何表示它们的位置，
+* method为对于找到的数值，如何表示它们的位置。method在以下三个值中选择：
+** 'd'：
 
 ### 5. 区间统计：
 #### 5.1 单个区间统计：
